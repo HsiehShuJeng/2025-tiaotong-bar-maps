@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_29ca33d867e0aaeff9c4c7ed32424a1c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_29ca33d867e0aaeff9c4c7ed32424a1c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_29ca33d867e0aaeff9c4c7ed32424a1c = L.map(
+                "map_29ca33d867e0aaeff9c4c7ed32424a1c",
+                {
+                    center: [25.05117483, 121.52623561],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_35359009db7175a0182f50a568582cd7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_35359009db7175a0182f50a568582cd7.addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var marker_c870b90233a8f94361d56090161d395e = L.marker(
+                [25.0579275, 121.5244397],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_30fd546724ad21eaf5ca93da6982dc75 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c870b90233a8f94361d56090161d395e.setIcon(icon_30fd546724ad21eaf5ca93da6982dc75);
+        
+    
+        var popup_fec1d183b9dbc1f82f5444076ca0cb05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0c55a56c02ec7370a8c37801bcc3bdf = $(`<div id="html_f0c55a56c02ec7370a8c37801bcc3bdf" style="width: 100.0%; height: 100.0%;">                 名稱: 辣吉點火烤兩吃<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7701<br>                 評論數量: 2827             </div>`)[0];
+                popup_fec1d183b9dbc1f82f5444076ca0cb05.setContent(html_f0c55a56c02ec7370a8c37801bcc3bdf);
+            
+        
+
+        marker_c870b90233a8f94361d56090161d395e.bindPopup(popup_fec1d183b9dbc1f82f5444076ca0cb05)
+        ;
+
+        
+    
+    
+            var marker_b0f45f01bdb95d7e2a7dc40f3f2d9893 = L.marker(
+                [25.0496833, 121.5274683],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_2f28b6c03d133d0b1d34847cee69b487 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_b0f45f01bdb95d7e2a7dc40f3f2d9893.setIcon(icon_2f28b6c03d133d0b1d34847cee69b487);
+        
+    
+        var popup_67933aa2b0b20671558e648b8eeee1e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aa6dccaa9880eb849c96ea80af0caa9 = $(`<div id="html_9aa6dccaa9880eb849c96ea80af0caa9" style="width: 100.0%; height: 100.0%;">                 名稱: 燒酒<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7342<br>                 評論數量: 57             </div>`)[0];
+                popup_67933aa2b0b20671558e648b8eeee1e0.setContent(html_9aa6dccaa9880eb849c96ea80af0caa9);
+            
+        
+
+        marker_b0f45f01bdb95d7e2a7dc40f3f2d9893.bindPopup(popup_67933aa2b0b20671558e648b8eeee1e0)
+        ;
+
+        
+    
+    
+            var marker_574066ae68d01aee0d69175df719e1a2 = L.marker(
+                [25.0507189, 121.5265458],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_a7d46631773f76a7c8cbf2d48401f31d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_574066ae68d01aee0d69175df719e1a2.setIcon(icon_a7d46631773f76a7c8cbf2d48401f31d);
+        
+    
+        var popup_79389fc0bbe561aaeda48d94f91b39bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3879c71dc7ad764ff558be3ccf9a841 = $(`<div id="html_a3879c71dc7ad764ff558be3ccf9a841" style="width: 100.0%; height: 100.0%;">                 名稱: 雲霧<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7384<br>                 評論數量: 342             </div>`)[0];
+                popup_79389fc0bbe561aaeda48d94f91b39bd.setContent(html_a3879c71dc7ad764ff558be3ccf9a841);
+            
+        
+
+        marker_574066ae68d01aee0d69175df719e1a2.bindPopup(popup_79389fc0bbe561aaeda48d94f91b39bd)
+        ;
+
+        
+    
+    
+            var marker_b9b9cdd1f4a0adc67119dbe24aa53366 = L.marker(
+                [25.0503199, 121.5274627],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_cacd59214bb7df0cc9c543269e7cfb40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_b9b9cdd1f4a0adc67119dbe24aa53366.setIcon(icon_cacd59214bb7df0cc9c543269e7cfb40);
+        
+    
+        var popup_bae96d6276d9acdee69b54dea2e71f36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41fd59d9e5e8f8b305bb198dc74d4926 = $(`<div id="html_41fd59d9e5e8f8b305bb198dc74d4926" style="width: 100.0%; height: 100.0%;">                 名稱: 小酒館<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7334<br>                 評論數量: 3             </div>`)[0];
+                popup_bae96d6276d9acdee69b54dea2e71f36.setContent(html_41fd59d9e5e8f8b305bb198dc74d4926);
+            
+        
+
+        marker_b9b9cdd1f4a0adc67119dbe24aa53366.bindPopup(popup_bae96d6276d9acdee69b54dea2e71f36)
+        ;
+
+        
+    
+    
+            var marker_80a11b3a85ef50ca5d3d5547a72ae822 = L.marker(
+                [25.0498668, 121.528184],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_a16d82cbaeebcf27dd21acbf8b79adad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_80a11b3a85ef50ca5d3d5547a72ae822.setIcon(icon_a16d82cbaeebcf27dd21acbf8b79adad);
+        
+    
+        var popup_76dfeb64ee77477f9a2882c5e323f916 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6d4d9c88057b788d247554fcf1bf60c = $(`<div id="html_b6d4d9c88057b788d247554fcf1bf60c" style="width: 100.0%; height: 100.0%;">                 名稱: Bar Logos<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7335<br>                 評論數量: 8             </div>`)[0];
+                popup_76dfeb64ee77477f9a2882c5e323f916.setContent(html_b6d4d9c88057b788d247554fcf1bf60c);
+            
+        
+
+        marker_80a11b3a85ef50ca5d3d5547a72ae822.bindPopup(popup_76dfeb64ee77477f9a2882c5e323f916)
+        ;
+
+        
+    
+    
+            var marker_2778523f4c96000b83daab8c65a39844 = L.marker(
+                [25.0509927, 121.5258069],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_a0353f71c505d62058fcaf8b2cf516ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2778523f4c96000b83daab8c65a39844.setIcon(icon_a0353f71c505d62058fcaf8b2cf516ae);
+        
+    
+        var popup_aa5deeee1c2212cef644d35062e29fa3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ff622258535a7ca62eaca48f1fff8c6 = $(`<div id="html_8ff622258535a7ca62eaca48f1fff8c6" style="width: 100.0%; height: 100.0%;">                 名稱: 四葉草 Clover<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7335<br>                 評論數量: 12             </div>`)[0];
+                popup_aa5deeee1c2212cef644d35062e29fa3.setContent(html_8ff622258535a7ca62eaca48f1fff8c6);
+            
+        
+
+        marker_2778523f4c96000b83daab8c65a39844.bindPopup(popup_aa5deeee1c2212cef644d35062e29fa3)
+        ;
+
+        
+    
+    
+            var marker_f1e0b8d251eab85f5deb849daec94f25 = L.marker(
+                [25.0505969, 121.5259251],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_bf1af32f502f97711402dfc1046877ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f1e0b8d251eab85f5deb849daec94f25.setIcon(icon_bf1af32f502f97711402dfc1046877ef);
+        
+    
+        var popup_b5a5b75023e8f37c63c0d24702bf6444 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c06ac16cebf3804ea4948cb170265e8 = $(`<div id="html_8c06ac16cebf3804ea4948cb170265e8" style="width: 100.0%; height: 100.0%;">                 名稱: 暗光窖<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7341<br>                 評論數量: 52             </div>`)[0];
+                popup_b5a5b75023e8f37c63c0d24702bf6444.setContent(html_8c06ac16cebf3804ea4948cb170265e8);
+            
+        
+
+        marker_f1e0b8d251eab85f5deb849daec94f25.bindPopup(popup_b5a5b75023e8f37c63c0d24702bf6444)
+        ;
+
+        
+    
+    
+            var marker_6608229bc8392bf4e221a1843622def0 = L.marker(
+                [25.0496884, 121.5246212],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_491e6abec96f24b276794b408e0ea60f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_6608229bc8392bf4e221a1843622def0.setIcon(icon_491e6abec96f24b276794b408e0ea60f);
+        
+    
+        var popup_c10f922e9ca95fa960643ec5eedcee50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e36db835c1bef5d67c2c113e714c15c = $(`<div id="html_6e36db835c1bef5d67c2c113e714c15c" style="width: 100.0%; height: 100.0%;">                 名稱: 日月茶莊 - 條通の酒<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7333<br>                 評論數量: 1             </div>`)[0];
+                popup_c10f922e9ca95fa960643ec5eedcee50.setContent(html_6e36db835c1bef5d67c2c113e714c15c);
+            
+        
+
+        marker_6608229bc8392bf4e221a1843622def0.bindPopup(popup_c10f922e9ca95fa960643ec5eedcee50)
+        ;
+
+        
+    
+    
+            var marker_2d7cb45f0a417ffc20b06afa7641c682 = L.marker(
+                [25.0507215, 121.5274686],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_2c2327765cc890b13e721c772eb8e576 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2d7cb45f0a417ffc20b06afa7641c682.setIcon(icon_2c2327765cc890b13e721c772eb8e576);
+        
+    
+        var popup_9f3b64561d3b7bbf60fe8866e14c8bbf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_993c39e576d168cb85836d426eeca85a = $(`<div id="html_993c39e576d168cb85836d426eeca85a" style="width: 100.0%; height: 100.0%;">                 名稱: 酒點見<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7367<br>                 評論數量: 228             </div>`)[0];
+                popup_9f3b64561d3b7bbf60fe8866e14c8bbf.setContent(html_993c39e576d168cb85836d426eeca85a);
+            
+        
+
+        marker_2d7cb45f0a417ffc20b06afa7641c682.bindPopup(popup_9f3b64561d3b7bbf60fe8866e14c8bbf)
+        ;
+
+        
+    
+    
+            var marker_647c305c82f5cb1ee314bcc39c52f289 = L.marker(
+                [25.0512324, 121.5244338],
+                {
+}
+            ).addTo(map_29ca33d867e0aaeff9c4c7ed32424a1c);
+        
+    
+            var icon_d637cd34b58cb395e85193e41109fbc8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_647c305c82f5cb1ee314bcc39c52f289.setIcon(icon_d637cd34b58cb395e85193e41109fbc8);
+        
+    
+        var popup_c2689faf771ea9991b1cd7760dfdde76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c20622dc663cd1b91e24741555e8502 = $(`<div id="html_1c20622dc663cd1b91e24741555e8502" style="width: 100.0%; height: 100.0%;">                 名稱: 暮 Taipei<br>                 評分: 5.0<br>                 貝氏平均評分: 4.7351<br>                 評論數量: 117             </div>`)[0];
+                popup_c2689faf771ea9991b1cd7760dfdde76.setContent(html_1c20622dc663cd1b91e24741555e8502);
+            
+        
+
+        marker_647c305c82f5cb1ee314bcc39c52f289.bindPopup(popup_c2689faf771ea9991b1cd7760dfdde76)
+        ;
+
+        
+    
+</script>
+</html>
