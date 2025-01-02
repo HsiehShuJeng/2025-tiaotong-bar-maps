@@ -15,14 +15,23 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .map-container iframe {
+        .map-item {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .map-item iframe {
             width: 100%;
             height: 500px;
             border: 1px solid #ccc;
-            margin-bottom: 20px;
+        }
+        .map-item h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #333;
         }
         @media (min-width: 768px) {
-            .map-container iframe {
+            .map-item {
                 width: 32%; /* Show 3 maps side by side on larger screens */
             }
         }
@@ -31,9 +40,18 @@
 <body>
     <h1>Welcome to Bar Maps</h1>
     <div class="map-container">
-        <iframe src="maps/top_10_bars_by_rating.html" title="Top 10 Bars by Rating"></iframe>
-        <iframe src="maps/top_10_bars_by_bayesian.html" title="Top 10 Bars by Bayesian Average"></iframe>
-        <iframe src="maps/top_10_bars_by_reviews.html" title="Top 10 Bars by Review Numbers"></iframe>
+        <div class="map-item">
+            <h2>Top 10 Bars by Rating</h2>
+            <iframe src="maps/top_10_bars_by_rating.html" title="評論分數前十"></iframe>
+        </div>
+        <div class="map-item">
+            <h2>Top 10 Bars by Bayesian Average</h2>
+            <iframe src="maps/top_10_bars_by_bayesian.html" title="貝氏平均前十"></iframe>
+        </div>
+        <div class="map-item">
+            <h2>Top 10 Bars by Review Numbers</h2>
+            <iframe src="maps/top_10_bars_by_reviews.html" title="評論數目前十"></iframe>
+        </div>
     </div>
 </body>
 </html>
