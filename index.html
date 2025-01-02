@@ -4,111 +4,165 @@
 <head>
     <title>2025 條通祭酒吧分析</title>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-    h1 {
-        text-align: center;
-    }
+        h1 {
+            text-align: center;
+        }
 
-    /* Navigation Tabs */
-    .nav-tabs {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-        background-color: #f4f4f4;
-        padding: 10px;
-        border-radius: 8px;
-    }
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-    .nav-tabs a {
-        padding: 10px 20px;
-        margin: 0 10px;
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
+        .nav-tabs a {
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-    .nav-tabs a:hover {
-        background-color: #ddd;
-    }
+        .nav-tabs a:hover {
+            background-color: #ddd;
+        }
 
-    .nav-tabs a.active {
-        background-color: #333;
-        color: #fff;
-    }
+        .nav-tabs a.active {
+            background-color: #333;
+            color: #fff;
+        }
 
-    .section {
-        margin-bottom: 40px;
-    }
+        .section {
+            margin-bottom: 40px;
+        }
 
-    .section h2 {
-        text-align: center;
-        font-size: 1.8em;
-        color: #333;
-        margin-bottom: 20px;
-    }
+        .section h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .grid-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-    }
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-    .grid-item {
-        flex: 1 1 calc(33.33% - 20px);
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .grid-item img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    .grid-item p {
-        margin-top: 10px;
-        font-size: 1.1em;
-        color: #555;
-    }
-
-    /* Responsive Google Sheet Embed */
-    .responsive-iframe-container {
-        position: relative;
-        width: 100%;
-        padding-bottom: 60%; /* Aspect ratio (adjust as needed) */
-        overflow: hidden;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-    }
-
-    .responsive-iframe-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    @media (max-width: 768px) {
         .grid-item {
-            flex: 1 1 100%;
+            flex: 1 1 calc(33.33% - 20px);
+            box-sizing: border-box;
+            text-align: center;
         }
 
-        .responsive-iframe-container {
-            padding-bottom: 80%; /* Increase height for smaller screens */
+        .grid-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
         }
-    }
+
+        .grid-item p {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Responsive Google Sheet Embed */
+        .responsive-iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 60%; /* Aspect ratio (adjust as needed) */
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .grid-item {
+                flex: 1 1 100%;
+            }
+
+            .responsive-iframe-container {
+                padding-bottom: 80%; /* Increase height for smaller screens */
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9em;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #555;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            background-color: #777;
+        }
+
+        footer .social-icons svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+        }
     </style>
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
@@ -217,16 +271,16 @@
     <!-- Lightbox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
-    // Smooth scrolling for navigation tabs
-    document.querySelectorAll('.nav-tabs a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
+        // Smooth scrolling for navigation tabs
+        document.querySelectorAll('.nav-tabs a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
     </script>
     <!-- Footer Section -->
     <footer>
@@ -237,18 +291,18 @@
                 <a href="javascript:void(0);">Terms of Service</a> |
                 <a href="javascript:void(0);">Contact Us</a>
             </p>
-            <div>
+            <div class="social-icons">
                 <a href="https://www.facebook.com/ScottXieh/" target="_blank">
-                    <i class="fab fa-facebook-f"></i> <!-- Font Awesome icon for Facebook -->
+                    <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="https://x.com/fantasticHsieh" target="_blank">
-                    <i class="fab fa-twitter"></i> <!-- Font Awesome icon for Twitter -->
+                    <i class="fab fa-twitter"></i>
                 </a>
                 <a href="https://www.instagram.com/hsieh.scott/" target="_blank">
-                    <i class="fab fa-instagram"></i> <!-- Font Awesome icon for Instagram -->
+                    <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://www.threads.net/@hsieh.scott" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                     </svg>
                 </a>
