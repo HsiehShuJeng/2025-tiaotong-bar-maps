@@ -57,7 +57,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: calc(100% - 100px); /* Adjust height to exclude the footer */
             z-index: 0; /* Place it above the video but below the content */
         }
 
@@ -68,7 +68,8 @@
             background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for readability */
             padding: 20px;
             border-radius: 10px;
-            max-width: 1200px;
+            max-width: 1200px; /* Wider for larger screens */
+            width: 90%; /* Responsive width */
             margin: 50px auto; /* Center the content */
         }
 
@@ -82,11 +83,7 @@
             }
         }
 
-        /* Rest of your existing CSS styles */
-        h1 {
-            text-align: center;
-        }
-
+        /* Navigation Tabs */
         .nav-tabs {
             display: flex;
             justify-content: space-between;
@@ -117,34 +114,32 @@
             color: #fff;
         }
 
+        /* Sections */
         .section {
             margin-bottom: 40px;
         }
 
         .section h2 {
             text-align: center;
-            font-size: 1.8em;
+            font-size: 2rem; /* Responsive font size */
             color: #333;
             margin-bottom: 20px;
         }
 
+        /* Grid Container */
         .grid-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-adjust columns */
             gap: 20px;
         }
 
         .grid-item {
-            flex: 1 1 calc(33.33% - 20px);
-            box-sizing: border-box;
             text-align: center;
         }
 
         .grid-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
             border: 1px solid #ccc;
             border-radius: 8px;
             cursor: pointer;
@@ -156,10 +151,11 @@
             color: #555;
         }
 
+        /* Responsive Iframes */
         .responsive-iframe-container {
             position: relative;
             width: 100%;
-            padding-bottom: 60%;
+            padding-bottom: 60%; /* Aspect ratio for iframe */
             overflow: hidden;
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -174,6 +170,7 @@
             border: none;
         }
 
+        /* Fashionable Button */
         .fashionable-button {
             display: inline-flex;
             align-items: center;
@@ -195,6 +192,7 @@
             margin-right: 8px;
         }
 
+        /* Footer */
         footer {
             background-color: #333;
             color: #fff;
@@ -246,6 +244,25 @@
             width: 16px;
             height: 16px;
             fill: #fff;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .content {
+                padding: 15px; /* Reduce padding on smaller screens */
+            }
+
+            .nav-tabs {
+                flex-direction: column; /* Stack navigation tabs vertically */
+            }
+
+            .nav-tabs a {
+                margin: 5px 0; /* Add spacing between stacked tabs */
+            }
+
+            .section h2 {
+                font-size: 1.5rem; /* Smaller font size on mobile */
+            }
         }
     </style>
     <!-- Lightbox CSS -->
