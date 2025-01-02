@@ -31,10 +31,12 @@
             text-align: center;
         }
         .grid-item img {
-            max-width: 100%;
-            height: auto;
+            width: 100%; /* Ensure images fill the container */
+            height: 300px; /* Fixed height for consistency */
+            object-fit: cover; /* Maintain aspect ratio */
             border: 1px solid #ccc;
             border-radius: 8px;
+            cursor: pointer; /* Indicate the image is clickable */
         }
         .grid-item p {
             margin-top: 10px;
@@ -47,6 +49,8 @@
             }
         }
     </style>
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
     <h1>Welcome to Bar Maps</h1>
@@ -75,30 +79,45 @@
         <h2>分析視覺化圖表</h2>
         <div class="grid-container">
             <div class="grid-item">
-                <img src="images/correlation_heatmap.png" alt="數值欄位相關性">
+                <a href="images/correlation_heatmap.png" data-lightbox="analysis" data-title="數值欄位相關性 (貝氏平均評分, 評分, 評論數量)">
+                    <img src="images/correlation_heatmap.png" alt="數值欄位相關性">
+                </a>
                 <p>數值欄位相關性 (貝氏平均評分, 評分, 評論數量)</p>
             </div>
             <div class="grid-item">
-                <img src="images/rating_by_area.png" alt="區域評分分佈">
+                <a href="images/rating_by_area.png" data-lightbox="analysis" data-title="區域評分分佈 (中山區 vs 中正區)">
+                    <img src="images/rating_by_area.png" alt="區域評分分佈">
+                </a>
                 <p>區域評分分佈 (中山區 vs 中正區)</p>
             </div>
             <div class="grid-item">
-                <img src="images/rating_distribution_with_counts.png" alt="評分分佈">
+                <a href="images/rating_distribution_with_counts.png" data-lightbox="analysis" data-title="評分分佈 (包含計數)">
+                    <img src="images/rating_distribution_with_counts.png" alt="評分分佈">
+                </a>
                 <p>評分分佈 (包含計數)</p>
             </div>
             <div class="grid-item">
-                <img src="images/rating_vs_reviews.png" alt="評分 vs 評論數量">
+                <a href="images/rating_vs_reviews.png" data-lightbox="analysis" data-title="評分 vs 評論數量 (散點圖)">
+                    <img src="images/rating_vs_reviews.png" alt="評分 vs 評論數量">
+                </a>
                 <p>評分 vs 評論數量 (散點圖)</p>
             </div>
             <div class="grid-item">
-                <img src="images/top_10_bars_bayesian_average.png" alt="貝氏平均前十">
+                <a href="images/top_10_bars_bayesian_average.png" data-lightbox="analysis" data-title="貝氏平均前十 (長條圖)">
+                    <img src="images/top_10_bars_bayesian_average.png" alt="貝氏平均前十">
+                </a>
                 <p>貝氏平均前十 (長條圖)</p>
             </div>
             <div class="grid-item">
-                <img src="images/wordcloud_bar_names.png" alt="酒吧名稱文字雲">
+                <a href="images/wordcloud_bar_names.png" data-lightbox="analysis" data-title="酒吧名稱文字雲">
+                    <img src="images/wordcloud_bar_names.png" alt="酒吧名稱文字雲">
+                </a>
                 <p>酒吧名稱文字雲</p>
             </div>
         </div>
     </div>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
