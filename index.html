@@ -79,6 +79,9 @@
     </style>
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- MathJax Script -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -104,6 +107,24 @@
     <!-- Images Section -->
     <div class="section">
         <h2>分析視覺化圖表</h2>
+        <!-- Math Formula Section -->
+        <div style="margin-top: 40px; text-align: center; font-size: 1.2em; color: #333;">
+            <h3>貝氏平均公式</h3>
+            <p>貝氏平均是一種加權平均方法，用於平衡評分與評論數量之間的關係。公式如下：</p>
+            <div style="font-family: 'Times New Roman', serif; font-size: 1.5em;">
+                \[
+                \text{貝氏平均} = \frac{C \times \bar{R} + n \times R}{C + n}
+                \]
+            </div>
+            <p>其中：</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li><strong>\( C \)</strong>：總評論數（所有酒吧的評論總數）。</li>
+                <li><strong>\( \bar{R} \)</strong>：平均評分（所有酒吧的平均評分）。</li>
+                <li><strong>\( n \)</strong>：當前酒吧評論數（該酒吧的評論數量）。</li>
+                <li><strong>\( R \)</strong>：當前酒吧評分（該酒吧的評分）。</li>
+            </ul>
+            <p>這個公式確保評論數較少的酒吧不會因為少數極端評分而影響排名，同時也考慮了整體評分的分佈。</p>
+        </div>
         <div class="grid-container">
             <div class="grid-item">
                 <a href="images/correlation_heatmap.png" data-lightbox="analysis" data-title="數值欄位相關性 (貝氏平均評分, 評分, 評論數量)">
@@ -172,6 +193,11 @@
                 </a>
                 <a href="https://www.instagram.com/hsieh.scott/" target="_blank">
                     <i class="fab fa-instagram"></i> <!-- Font Awesome icon for Instagram -->
+                </a>
+                <a href="https://www.threads.net/@hsieh.scott" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
                 </a>
             </div>
         </div>
