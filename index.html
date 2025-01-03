@@ -285,6 +285,27 @@
             fill: #fff;
         }
 
+        /* Flex Container for Heading and Description Box */
+        .header-container {
+            display: flex;
+            align-items: center;
+            /* Vertically center items */
+            justify-content: space-between;
+            /* Space between h1 and description box */
+            margin-bottom: 20px;
+            /* Adjust spacing as needed */
+        }
+
+        /* Container for the description box */
+        .description-container {
+            flex: 1;
+            /* Take up remaining space */
+            max-width: 400px;
+            /* Limit the width of the description box */
+            margin-left: 20px;
+            /* Add spacing between heading and description box */
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .header-container {
@@ -304,36 +325,19 @@
             }
         }
 
-        /* Flex Container for Heading and Description Box */
-        .header-container {
-            display: flex;
-            align-items: flex-start;
-            /* Align items to the top */
-            justify-content: space-between;
-            /* Space between heading and description box */
-            margin-bottom: 20px;
-            /* Add spacing below the header */
-        }
-
-        /* Container for the description box */
-        .description-container {
-            flex: 1;
-            /* Take up remaining space */
-            max-width: 400px;
-            /* Limit the width of the description box */
-            margin-left: 20px;
-            /* Add spacing between heading and description box */
-        }
-
         /* Description Box */
         .description-box {
-            background-color: rgba(255, 255, 255, 0.8);
-            /* Semi-transparent background */
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            /* Light border */
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            /* Fashionable gradient */
+            border: 1px solid #ccc;
             padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            /* Adjust width as needed */
+            color: white;
+            /* Text color */
+            font-family: Arial, sans-serif;
         }
 
 
@@ -356,16 +360,14 @@
             }
 
             50% {
-                border-color: black;
+                border-color: white;
             }
         }
 
         #descriptionText {
             overflow: hidden;
-            /* Hide overflow */
             white-space: nowrap;
-            /* Keep text on one line */
-            border-right: 2px solid black;
+            border-right: 2px solid white;
             /* Cursor effect */
             animation:
                 typing 4s steps(40, end),
@@ -400,9 +402,8 @@
     <div class="click-blocker"></div>
     <!-- Main Content -->
     <div class="content">
-        <h1>歡迎來到考特打造的條通祭分析</h1>
-        <!-- Description Box -->
-        <div class="description-container">
+        <div class="header-container">
+            <h1>歡迎來到考特打造的條通祭分析</h1>
             <div class="description-box">
                 <p id="descriptionText">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3
                     家餐廳合作<br>透過「微醺散步」和「沈浸條通」文化導覽等系列活動<br>讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</p>
