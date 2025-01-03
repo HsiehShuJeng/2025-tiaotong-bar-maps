@@ -320,6 +320,10 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             color: white;
             font-family: Arial, sans-serif;
+            white-space: pre-wrap;
+            /* Allow text to wrap naturally */
+            overflow: hidden;
+            /* Hide overflow during animation */
         }
 
         /* Typing Animation */
@@ -354,25 +358,16 @@
         .typing-line {
             display: inline-block;
             overflow: hidden;
-            white-space: nowrap;
+            white-space: pre-wrap;
+            /* Allow text to wrap naturally */
             border-right: 2px solid white;
             animation:
-                typing 4s steps(40, end) forwards,
+                typing 8s steps(100, end) forwards,
+                /* Adjust duration and steps as needed */
                 blink-caret 0.75s step-end infinite;
             font-family: monospace;
-        }
-
-        /* Delay the start of each line's animation */
-        .typing-line:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .typing-line:nth-child(2) {
-            animation-delay: 4s;
-        }
-
-        .typing-line:nth-child(3) {
-            animation-delay: 8s;
+            line-height: 1.5;
+            /* Ensure proper line spacing */
         }
     </style>
     <!-- Favicon -->
@@ -403,9 +398,8 @@
             <div class="description-container">
                 <div class="description-box">
                     <p>
-                        <span class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作</span><br>
-                        <span class="typing-line">透過「微醺散步」和「沈浸條通」文化導覽等系列活動</span><br>
-                        <span class="typing-line">讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</span>
+                        <span class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3
+                            家餐廳合作，透過「微醺散步」和「沈浸條通」文化導覽等系列活動，讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化。</span>
                     </p>
                 </div>
             </div>
