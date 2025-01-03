@@ -32,8 +32,6 @@
             overflow: hidden;
         }
 
-
-
         .video-background iframe {
             position: absolute;
             top: 50%;
@@ -170,7 +168,6 @@
             text-align: center;
         }
 
-
         .grid-item img {
             width: 100%;
             /* Make images responsive */
@@ -289,59 +286,41 @@
         .header-container {
             display: flex;
             align-items: center;
-            /* Vertically center items */
             justify-content: space-between;
-            /* Space between h1 and description box */
             margin-bottom: 20px;
-            /* Adjust spacing as needed */
         }
-
 
         /* Container for the description box */
         .description-container {
             flex: 1;
-            /* Take up remaining space */
             max-width: 400px;
-            /* Limit the width of the description box */
             margin-left: 20px;
-            /* Add spacing between heading and description box */
         }
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
-                /* Stack heading and description box vertically on small screens */
                 align-items: center;
-                /* Center items */
             }
 
             .description-container {
                 margin-left: 0;
-                /* Remove left margin on small screens */
                 margin-top: 20px;
-                /* Add spacing between heading and description box */
                 max-width: 100%;
-                /* Full width on small screens */
             }
         }
 
         /* Description Box */
         .description-box {
-            background: rgba(255, 255, 255, 0.8);
-            /* Semi-transparent background */
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            /* Light border */
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            border: 1px solid #ccc;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            /* Adjust width as needed */
-            color: #333;
-            /* Text color */
+            color: white;
             font-family: Arial, sans-serif;
         }
-
 
         /* Typing Animation */
         @keyframes typing {
@@ -362,56 +341,38 @@
             }
 
             50% {
-                border-color: black;
+                border-color: white;
             }
+        }
+
+        /* Container for each line of text */
+        .description-box p {
+            margin: 0;
+            line-height: 1.5;
         }
 
         .typing-line {
             display: inline-block;
-            /* Ensure each line is treated as a block */
             overflow: hidden;
-            /* Hide overflow */
             white-space: nowrap;
-            /* Keep text on one line */
-            border-right: 2px solid black;
-            /* Cursor effect */
+            border-right: 2px solid white;
             animation:
-                typing 4s steps(40, end),
-                /* Typing animation */
+                typing 4s steps(40, end) forwards,
                 blink-caret 0.75s step-end infinite;
-            /* Cursor blink animation */
             font-family: monospace;
-            /* Optional: Use a monospace font for typing effect */
         }
 
         /* Delay the start of each line's animation */
         .typing-line:nth-child(1) {
             animation-delay: 0s;
-            /* First line starts immediately */
         }
 
         .typing-line:nth-child(2) {
             animation-delay: 4s;
-            /* Second line starts after the first line finishes */
         }
 
         .typing-line:nth-child(3) {
             animation-delay: 8s;
-            /* Third line starts after the second line finishes */
-        }
-
-        #descriptionText {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid white;
-            /* Cursor effect */
-            animation:
-                typing 4s steps(40, end),
-                /* Typing animation */
-                blink-caret 0.75s step-end infinite;
-            /* Cursor blink animation */
-            font-family: monospace;
-            /* Optional: Use a monospace font for typing effect */
         }
     </style>
     <!-- Favicon -->
@@ -424,7 +385,6 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-
 
 <body>
     <!-- YouTube Video Background -->
@@ -440,12 +400,14 @@
     <div class="content">
         <div class="header-container">
             <h1>歡迎來到考特打造的條通祭分析</h1>
-            <div class="description-box">
-                <p id="descriptionText">
-                    <span class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作</span><br>
-                    <span class="typing-line">透過「微醺散步」和「沈浸條通」文化導覽等系列活動</span><br>
-                    <span class="typing-line">讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</span>
-                </p>
+            <div class="description-container">
+                <div class="description-box">
+                    <p>
+                        <span class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作</span><br>
+                        <span class="typing-line">透過「微醺散步」和「沈浸條通」文化導覽等系列活動</span><br>
+                        <span class="typing-line">讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</span>
+                    </p>
+                </div>
             </div>
         </div>
         <!-- Navigation Tabs -->
