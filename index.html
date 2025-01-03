@@ -276,6 +276,55 @@
             margin-left: 20px;
         }
 
+        /* Description Box */
+        .description-box {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            max-width: 400px; /* Fixed maximum width */
+            overflow: hidden; /* Hide overflow */
+            white-space: pre-wrap; /* Allow text to wrap naturally */
+            line-height: 1.5; /* Ensure proper line spacing */
+            display: flex; /* Align text to the top-left corner */
+            align-items: flex-start; /* Align text to the top */
+            justify-content: flex-start; /* Align text to the left */
+            position: relative; /* Required for cursor positioning */
+        }
+
+        /* Typing Line */
+        .typing-line {
+            display: inline-block;
+            overflow: hidden;
+            white-space: pre-wrap; /* Allow text to wrap naturally */
+            line-height: 1.5; /* Ensure proper line spacing */
+            text-align: left; /* Ensure text aligns to the left */
+        }
+
+        /* Blinking Cursor */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em; /* Match line height */
+            background-color: white;
+            animation: blink 0.75s step-end infinite;
+            position: absolute; /* Position the cursor absolutely */
+            bottom: 0; /* Align to the bottom of the last line */
+        }
+
+        @keyframes blink {
+            from, to {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .header-container {
@@ -288,67 +337,6 @@
                 margin-top: 20px;
                 max-width: 100%;
             }
-        }
-
-        /* Description Box */
-        .description-box {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            border: 1px solid #ccc;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            color: white;
-            font-family: Arial, sans-serif;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            min-height: 120px;
-            /* Ensures a consistent height */
-            overflow: hidden;
-            /* Hide overflow */
-            white-space: pre-wrap;
-            line-height: 1.5;
-            position: relative;
-        }
-
-        /* Typing Animation */
-        /* Keyframes for Typing */
-        @keyframes typing {
-            0% {
-                clip-path: inset(0 100% 0 0);
-                /* Start hidden */
-                visibility: visible;
-                /* Make it visible */
-            }
-
-            100% {
-                clip-path: inset(0 0 0 0);
-                /* Reveal full text */
-            }
-        }
-
-        /* Blinking Cursor Effect */
-        @keyframes blink-caret {
-            50% {
-                border-color: white;
-            }
-
-            100% {
-                border-color: transparent;
-            }
-        }
-
-        /* Container for the typing line */
-        .typing-line {
-            display: inline-block;
-            white-space: pre-wrap;
-            visibility: hidden;
-            /* Ensures text stays within the box */
-            position: absolute;
-            overflow: hidden;
-            animation:
-                typing 5s steps(40, end) forwards,
-                blink-caret 0.75s step-end infinite;
         }
     </style>
     <!-- Favicon -->
@@ -378,9 +366,7 @@
             <h1>歡迎來到考特打造的條通祭分析</h1>
             <div class="description-container">
                 <div class="description-box">
-                    <p class="typing-line">
-                        2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作，透過「微醺散步」
-                        和「沈浸條通」文化導覽等系列活動，讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化。
+                    <p class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作，透過「微醺散步」和「沈浸條通」文化導覽等系列活動，讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化。
                     </p>
                 </div>
             </div>
@@ -572,6 +558,34 @@
             </div>
         </div>
     </footer>
+    <!-- Typing Animation Script -->
+    <script>
+        const typingLine = document.querySelector('.typing-line');
+        const text = typingLine.textContent.trim(); // Remove leading/trailing whitespace
+        typingLine.textContent = ''; // Clear the text initially
+
+        let index = 0;
+        const typingSpeed = 55; // Adjust typing speed (in milliseconds)
+
+        // Create a blinking cursor element
+        const cursor = document.createElement('span');
+        cursor.classList.add('cursor');
+        typingLine.appendChild(cursor); // Add cursor to the typing line
+
+        function type() {
+            if (index < text.length) {
+                typingLine.textContent += text[index];
+                index++;
+                setTimeout(type, typingSpeed);
+            } else {
+                // Remove the blinking cursor after typing is complete
+                cursor.remove();
+            }
+        }
+
+        // Start the typing animation
+        type();
+    </script>
 </body>
 
 </html>
