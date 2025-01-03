@@ -155,11 +155,14 @@
             text-align: center;
         }
 
+
         .grid-item img {
             width: 100%;
             /* Make images responsive */
-            height: auto;
-            /* Maintain aspect ratio */
+            height: 300px;
+            /* Set a fixed height for all images */
+            object-fit: cover;
+            /* Ensure the image covers the entire area without distortion */
             border: 1px solid #ccc;
             border-radius: 8px;
             cursor: pointer;
