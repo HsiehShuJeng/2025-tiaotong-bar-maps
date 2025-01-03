@@ -308,8 +308,22 @@
             }
         }
 
+        /* Container for the description box */
+        .description-container {
+            position: relative;
+            /* Establish positioning context */
+            margin-top: 20px;
+            /* Adjust as needed */
+        }
+
         /* Description Box */
         .description-box {
+            position: absolute;
+            /* Position relative to the container */
+            top: 0;
+            /* Adjust vertical position */
+            left: 50px;
+            /* Adjust horizontal position */
             background-color: white;
             border: 1px solid #ccc;
             padding: 10px;
@@ -317,8 +331,6 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             /* Adjust width as needed */
-            margin: 20px auto;
-            /* Center the box */
         }
 
         /* Typing Animation */
@@ -397,9 +409,10 @@
                     <i class="fas fa-external-link-alt"></i> 直奔 Google Sheets
                 </a>
             </h2>
-            <div class="description-box">
-                <p id="descriptionText">This is a simple description for the event. It will appear with a typing
-                    animation.</p>
+            <div class="description-container">
+                <div class="description-box">
+                    <p id="descriptionText"></p>
+                </div>
             </div>
             <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
                 Kamijo Salon Bar 在 Line 熱點找得到，但 Google Map 上就只能用地址去搜尋。<br>
