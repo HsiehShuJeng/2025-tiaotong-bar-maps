@@ -320,10 +320,10 @@
         .description-box {
             position: absolute;
             /* Position relative to the container */
-            top: 50px;
-            /* Adjust vertical position */
-            left: 200px;
-            /* Adjust horizontal position */
+            top: -50px;
+            /* Move the box above the Google Sheet */
+            left: 0;
+            /* Align to the left */
             background-color: white;
             border: 1px solid #ccc;
             padding: 10px;
@@ -331,6 +331,8 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             /* Adjust width as needed */
+            z-index: 10;
+            /* Ensure it appears above other elements */
         }
 
 
