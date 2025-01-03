@@ -300,39 +300,41 @@
             color: white;
             font-family: Arial, sans-serif;
             width: 100%;
-            /* Responsive width */
             max-width: 400px;
-            /* Fixed maximum width */
+            height: auto;
+            min-height: 120px;
+            /* Ensures a consistent height */
             overflow: hidden;
-            /* Hide overflow during animation */
+            /* Hide overflow */
             white-space: pre-wrap;
-            /* Allow text to wrap naturally */
             line-height: 1.5;
-            /* Ensure proper line spacing */
+            position: relative;
         }
 
         /* Typing Animation */
+        /* Keyframes for Typing */
         @keyframes typing {
-            from {
+            0% {
                 clip-path: inset(0 100% 0 0);
-                /* Start with text fully hidden */
+                /* Start hidden */
+                visibility: visible;
+                /* Make it visible */
             }
 
-            to {
+            100% {
                 clip-path: inset(0 0 0 0);
-                /* End with text fully visible */
+                /* Reveal full text */
             }
         }
 
+        /* Blinking Cursor Effect */
         @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent;
-            }
-
             50% {
                 border-color: white;
+            }
+
+            100% {
+                border-color: transparent;
             }
         }
 
@@ -340,16 +342,13 @@
         .typing-line {
             display: inline-block;
             white-space: pre-wrap;
-            /* Allow text to wrap naturally */
-            border-right: 2px solid white;
-            /* Cursor effect */
+            visibility: hidden;
+            /* Ensures text stays within the box */
+            position: absolute;
+            overflow: hidden;
             animation:
-                typing 8s steps(40, end) forwards,
-                /* Adjust duration and steps as needed */
+                typing 5s steps(40, end) forwards,
                 blink-caret 0.75s step-end infinite;
-            font-family: monospace;
-            line-height: 1.5;
-            /* Ensure proper line spacing */
         }
     </style>
     <!-- Favicon -->
@@ -379,9 +378,9 @@
             <h1>歡迎來到考特打造的條通祭分析</h1>
             <div class="description-container">
                 <div class="description-box">
-                    <p>
-                        <span class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3
-                            家餐廳合作，透過「微醺散步」和「沈浸條通」文化導覽等系列活動，讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化。</span>
+                    <p class="typing-line">
+                        2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作，透過「微醺散步」
+                        和「沈浸條通」文化導覽等系列活動，讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化。
                     </p>
                 </div>
             </div>
