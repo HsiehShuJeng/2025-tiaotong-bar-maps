@@ -287,52 +287,53 @@
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
-            .content {
-                padding: 15px;
-                /* Reduce padding on smaller screens */
-            }
-
-            .nav-tabs {
+            .header-container {
                 flex-direction: column;
-                /* Stack navigation tabs vertically */
+                /* Stack heading and description box vertically on small screens */
+                align-items: center;
+                /* Center items */
             }
 
-            .nav-tabs a {
-                margin: 5px 0;
-                /* Add spacing between stacked tabs */
+            .description-container {
+                margin-left: 0;
+                /* Remove left margin on small screens */
+                margin-top: 20px;
+                /* Add spacing between heading and description box */
+                max-width: 100%;
+                /* Full width on small screens */
             }
+        }
 
-            .section h2 {
-                font-size: 1.5rem;
-                /* Smaller font size on mobile */
-            }
+        /* Flex Container for Heading and Description Box */
+        .header-container {
+            display: flex;
+            align-items: flex-start;
+            /* Align items to the top */
+            justify-content: space-between;
+            /* Space between heading and description box */
+            margin-bottom: 20px;
+            /* Add spacing below the header */
         }
 
         /* Container for the description box */
         .description-container {
-            position: relative;
-            /* Establish positioning context */
-            margin-top: 20px;
-            /* Adjust as needed */
+            flex: 1;
+            /* Take up remaining space */
+            max-width: 400px;
+            /* Limit the width of the description box */
+            margin-left: 20px;
+            /* Add spacing between heading and description box */
         }
 
         /* Description Box */
         .description-box {
-            position: absolute;
-            /* Position relative to the container */
-            top: -50px;
-            /* Move the box above the Google Sheet */
-            left: 0;
-            /* Align to the left */
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Semi-transparent background */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            /* Light border */
+            padding: 15px;
+            border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            /* Adjust width as needed */
-            z-index: 10;
-            /* Ensure it appears above other elements */
         }
 
 
@@ -400,6 +401,13 @@
     <!-- Main Content -->
     <div class="content">
         <h1>歡迎來到考特打造的條通祭分析</h1>
+        <!-- Description Box -->
+        <div class="description-container">
+            <div class="description-box">
+                <p id="descriptionText">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3
+                    家餐廳合作<br>透過「微醺散步」和「沈浸條通」文化導覽等系列活動<br>讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</p>
+            </div>
+        </div>
         <!-- Navigation Tabs -->
         <div class="nav-tabs">
             <a href="#google-sheet-section">Google Sheet 數據</a>
@@ -414,12 +422,6 @@
                     <i class="fas fa-external-link-alt"></i> 直奔 Google Sheets
                 </a>
             </h2>
-            <div class="description-container">
-                <div class="description-box">
-                    <p id="descriptionText">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3
-                        家餐廳合作<br>透過「微醺散步」和「沈浸條通」文化導覽等系列活動<br>讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</p>
-                </div>
-            </div>
             <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
                 Kamijo Salon Bar 在 Line 熱點找得到，但 Google Map 上就只能用地址去搜尋。<br>
                 因為 Google 地圖上沒有相關數據可以觀看，所以 Google Sheet 裡面這家酒吧就沒有列席。
