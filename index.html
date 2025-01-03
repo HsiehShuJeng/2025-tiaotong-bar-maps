@@ -272,7 +272,7 @@
         /* Container for the description box */
         .description-container {
             flex: 1;
-            max-width: 400px;
+            margin-left: auto; /* Push to the right */
             margin-left: 20px;
         }
 
@@ -285,8 +285,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             color: white;
             font-family: Arial, sans-serif;
-            width: 100%;
-            max-width: 400px; /* Fixed maximum width */
+            width: 100%; /* Take full width of its container */
             overflow: hidden; /* Hide overflow */
             white-space: pre-wrap; /* Allow text to wrap naturally */
             line-height: 1.5; /* Ensure proper line spacing */
@@ -295,7 +294,7 @@
             justify-content: flex-start; /* Align text to the left */
             position: relative; /* Required for cursor positioning */
         }
-
+        
         /* Typing Line */
         .typing-line {
             display: inline-block;
