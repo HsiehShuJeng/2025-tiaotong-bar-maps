@@ -360,8 +360,42 @@
             }
 
             50% {
-                border-color: white;
+                border-color: black;
             }
+        }
+
+        .typing-line {
+            display: inline-block;
+            /* Ensure each line is treated as a block */
+            overflow: hidden;
+            /* Hide overflow */
+            white-space: nowrap;
+            /* Keep text on one line */
+            border-right: 2px solid black;
+            /* Cursor effect */
+            animation:
+                typing 4s steps(40, end),
+                /* Typing animation */
+                blink-caret 0.75s step-end infinite;
+            /* Cursor blink animation */
+            font-family: monospace;
+            /* Optional: Use a monospace font for typing effect */
+        }
+
+        /* Delay the start of each line's animation */
+        .typing-line:nth-child(1) {
+            animation-delay: 0s;
+            /* First line starts immediately */
+        }
+
+        .typing-line:nth-child(2) {
+            animation-delay: 4s;
+            /* Second line starts after the first line finishes */
+        }
+
+        .typing-line:nth-child(3) {
+            animation-delay: 8s;
+            /* Third line starts after the second line finishes */
         }
 
         #descriptionText {
@@ -405,8 +439,11 @@
         <div class="header-container">
             <h1>歡迎來到考特打造的條通祭分析</h1>
             <div class="description-box">
-                <p id="descriptionText">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3
-                    家餐廳合作<br>透過「微醺散步」和「沈浸條通」文化導覽等系列活動<br>讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</p>
+                <p id="descriptionText">
+                    <span class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作</span><br>
+                    <span class="typing-line">透過「微醺散步」和「沈浸條通」文化導覽等系列活動</span><br>
+                    <span class="typing-line">讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化</span>
+                </p>
             </div>
         </div>
         <!-- Navigation Tabs -->
