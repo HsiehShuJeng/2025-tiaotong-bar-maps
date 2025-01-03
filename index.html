@@ -314,11 +314,13 @@
         /* Typing Animation */
         @keyframes typing {
             from {
-                width: 0;
+                clip-path: inset(0 100% 0 0);
+                /* Start with text fully hidden */
             }
 
             to {
-                width: 100%;
+                clip-path: inset(0 0 0 0);
+                /* End with text fully visible */
             }
         }
 
@@ -337,12 +339,12 @@
         /* Container for the typing line */
         .typing-line {
             display: inline-block;
-            overflow: hidden;
             white-space: pre-wrap;
             /* Allow text to wrap naturally */
             border-right: 2px solid white;
+            /* Cursor effect */
             animation:
-                typing 8s steps(100, end) forwards,
+                typing 8s steps(40, end) forwards,
                 /* Adjust duration and steps as needed */
                 blink-caret 0.75s step-end infinite;
             font-family: monospace;
