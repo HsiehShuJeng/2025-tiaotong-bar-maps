@@ -32,6 +32,8 @@
             overflow: hidden;
         }
 
+
+
         .video-background iframe {
             position: absolute;
             top: 50%;
@@ -40,9 +42,10 @@
             height: 100vh;
             transform: translate(-50%, -50%);
             object-fit: cover;
-            /* Ensure the video covers the entire background */
             pointer-events: none;
-            /* Disable interaction with the iframe */
+            /* Hide YouTube overlays */
+            filter: brightness(0.8);
+            /* Optional: Adjust brightness to blend with the background */
         }
 
         /* Overlay to adjust transparency */
@@ -55,6 +58,18 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.2);
             /* Adjust transparency (0.5 = 50% opacity) */
+        }
+
+        /* Hide YouTube logo and other elements */
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            pointer-events: none;
         }
 
         /* Click Blocker Overlay */
@@ -303,6 +318,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 
 <body>
     <!-- YouTube Video Background -->
