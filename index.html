@@ -449,6 +449,7 @@
             <h2>供 Shot 時間分佈</h2>
             <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
                 以下是各小時提供 Shot 的酒吧分佈，按貝氏平均評分排序。<br>
+                在店家名稱上停留一陣子，促銷資訊就會顯示。
             </p>
 
             <!-- First Block: 13:00 ~ 17:00 -->
@@ -462,6 +463,24 @@
                             <th colspan="3">15:00</th>
                             <th colspan="3">16:00</th>
                             <th colspan="3">17:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- Second Block: 18:00 ~ 22:00 -->
+            <div class="table-container">
+                <h3>18:00 ~ 22:00</h3>
+                <table id="shot-distribution-table-2">
+                    <thead>
+                        <tr>
+                            <th colspan="3">18:00</th>
+                            <th colspan="3">19:00</th>
+                            <th colspan="3">20:00</th>
+                            <th colspan="3">21:00</th>
+                            <th colspan="3">22:00</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -486,25 +505,6 @@
                     <li><strong>\( R \)</strong>：當前酒吧評分（該酒吧的評分）。</li>
                 </ul>
                 <p>這個公式確保評論數較少的酒吧不會因為少數極端評分而影響排名，同時也考慮了整體評分的分佈。</p>
-            </div>
-
-            <!-- Second Block: 18:00 ~ 22:00 -->
-            <div class="table-container">
-                <h3>18:00 ~ 22:00</h3>
-                <table id="shot-distribution-table-2">
-                    <thead>
-                        <tr>
-                            <th colspan="3">18:00</th>
-                            <th colspan="3">19:00</th>
-                            <th colspan="3">20:00</th>
-                            <th colspan="3">21:00</th>
-                            <th colspan="3">22:00</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Rows will be populated by JavaScript -->
-                    </tbody>
-                </table>
             </div>
         </div>
         <!-- Google Sheet Section -->
