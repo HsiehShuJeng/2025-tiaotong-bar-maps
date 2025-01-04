@@ -571,7 +571,7 @@ function populateTable() {
     // Helper to create rows for a bar
     function createBarRow(bar) {
         return `
-            <td title="${bar.promotion || 'No promotion available'}">${bar.name}</td>
+            <td class="bar-name" data-promotion="${bar.promotion || 'No promotion available'}">${bar.name}</td>
             <td style="text-align: left;">${bar.bayesianScore}<br>🅶 ${bar.rating}<br>🅶 ${bar.reviewCount}</td>
             <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
         `;
@@ -617,6 +617,46 @@ function populateTable() {
 
             tableBody.appendChild(row);
         }
+
+        // Add click event listeners to bar name cells
+        const barNameCells = tableBody.querySelectorAll(".bar-name");
+        barNameCells.forEach(cell => {
+            cell.addEventListener("click", () => {
+                // Toggle the popup
+                const promotion = cell.getAttribute("data-promotion");
+                const popup = document.createElement("div");
+                popup.className = "promotion-popup";
+                popup.textContent = promotion;
+
+                // Position the popup relative to the clicked cell
+                const rect = cell.getBoundingClientRect();
+                popup.style.position = "absolute";
+                popup.style.top = `${rect.bottom}px`;
+                popup.style.left = `${rect.left}px`;
+                popup.style.backgroundColor = "white";
+                popup.style.border = "1px solid #ccc";
+                popup.style.padding = "10px";
+                popup.style.zIndex = "1000";
+                popup.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+
+                // Remove the popup if it already exists
+                const existingPopup = document.querySelector(".promotion-popup");
+                if (existingPopup) {
+                    existingPopup.remove();
+                }
+
+                // Add the popup to the document
+                document.body.appendChild(popup);
+
+                // Add a click event listener to the document to remove the popup when clicking outside
+                document.addEventListener("click", function handleOutsideClick(event) {
+                    if (!popup.contains(event.target) && !cell.contains(event.target)) {
+                        popup.remove();
+                        document.removeEventListener("click", handleOutsideClick);
+                    }
+                }, { once: true });
+            });
+        });
     }
 
     // First table: 13:00 ~ 17:00
