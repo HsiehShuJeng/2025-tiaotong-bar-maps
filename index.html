@@ -272,8 +272,10 @@
         /* Container for the description box */
         .description-container {
             flex: 1;
-            margin-left: auto; /* Push to the right */
-            padding-left: 20px; /* Add some spacing between the heading and the box */
+            margin-left: auto;
+            /* Push to the right */
+            padding-left: 20px;
+            /* Add some spacing between the heading and the box */
         }
 
         /* Description Box */
@@ -285,40 +287,57 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             color: white;
             font-family: Arial, sans-serif;
-            width: 100%; /* Take full width of its container */
-            overflow: hidden; /* Hide overflow */
-            white-space: pre-wrap; /* Allow text to wrap naturally */
-            line-height: 1.5; /* Ensure proper line spacing */
-            display: flex; /* Align text to the top-left corner */
-            align-items: flex-start; /* Align text to the top */
-            justify-content: flex-start; /* Align text to the left */
-            position: relative; /* Required for cursor positioning */
+            width: 100%;
+            /* Take full width of its container */
+            overflow: hidden;
+            /* Hide overflow */
+            white-space: pre-wrap;
+            /* Allow text to wrap naturally */
+            line-height: 1.5;
+            /* Ensure proper line spacing */
+            display: flex;
+            /* Align text to the top-left corner */
+            align-items: flex-start;
+            /* Align text to the top */
+            justify-content: flex-start;
+            /* Align text to the left */
+            position: relative;
+            /* Required for cursor positioning */
         }
 
         /* Typing Line */
         .typing-line {
             display: inline-block;
             overflow: hidden;
-            white-space: pre-wrap; /* Allow text to wrap naturally */
-            line-height: 1.5; /* Ensure proper line spacing */
-            text-align: left; /* Ensure text aligns to the left */
+            white-space: pre-wrap;
+            /* Allow text to wrap naturally */
+            line-height: 1.5;
+            /* Ensure proper line spacing */
+            text-align: left;
+            /* Ensure text aligns to the left */
         }
 
         /* Blinking Cursor */
         .cursor {
             display: inline-block;
             width: 2px;
-            height: 1.2em; /* Match line height */
+            height: 1.2em;
+            /* Match line height */
             background-color: white;
             animation: blink 0.75s step-end infinite;
-            position: absolute; /* Position the cursor absolutely */
-            bottom: 0; /* Align to the bottom of the last line */
+            position: absolute;
+            /* Position the cursor absolutely */
+            bottom: 0;
+            /* Align to the bottom of the last line */
         }
 
         @keyframes blink {
-            from, to {
+
+            from,
+            to {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0;
             }
@@ -336,6 +355,44 @@
                 margin-top: 20px;
                 max-width: 100%;
             }
+        }
+
+        /* Table Styling */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        #shot-distribution-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            min-width: 1000px;
+        }
+
+        #shot-distribution-table th,
+        #shot-distribution-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        #shot-distribution-table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        #shot-distribution-table tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #shot-distribution-table tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+
+        #shot-distribution-table tbody tr:last-of-type {
+            border-bottom: 2px solid #333;
         }
     </style>
     <!-- Favicon -->
@@ -365,13 +422,15 @@
             <h1>歡迎來到考特打造的條通祭分析</h1>
             <div class="description-container">
                 <div class="description-box">
-                    <p class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3 家餐廳合作，透過「微醺散步」和「沈浸條通」文化導覽等系列活動，讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化。
+                    <p class="typing-line">2025 條通祭，由在地青年發起，與商圈內 40 家酒吧和 3
+                        家餐廳合作，透過「微醺散步」和「沈浸條通」文化導覽等系列活動，讓參與者在享受美酒的同時，深入了解條通商圈的歷史與文化。
                     </p>
                 </div>
             </div>
         </div>
         <!-- Navigation Tabs -->
         <div class="nav-tabs">
+            <a href="#shot-operating-distribution">供 Shot 時間分布</a>
             <a href="#google-sheet-section">Google Sheet 數據</a>
             <a href="#maps-section">排名地圖</a>
             <a href="#analysis-section">視覺化分析</a>
@@ -395,6 +454,35 @@
                             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIRuQPAehPk2sAMXcZCCyYLan7L2JdeKwWbWr8eBOIYMoo4jb2uHX9Ew3X3E6Tn9k-KB8vLNRb2pvT/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Shot Operating Distribution Section -->
+        <!-- Shot Operating Distribution Section -->
+        <div class="section" id="shot-operating-distribution">
+            <h2>供 Shot 時間分佈</h2>
+            <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
+                以下是各小時提供 Shot 的酒吧分佈，按貝氏平均評分排序。
+            </p>
+            <div class="table-container">
+                <table id="shot-distribution-table">
+                    <thead>
+                        <tr>
+                            <th>13:00</th>
+                            <th>14:00</th>
+                            <th>15:00</th>
+                            <th>16:00</th>
+                            <th>17:00</th>
+                            <th>18:00</th>
+                            <th>19:00</th>
+                            <th>20:00</th>
+                            <th>21:00</th>
+                            <th>22:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
             </div>
         </div>
         <!-- Maps Section -->
@@ -508,12 +596,12 @@
     <script>
         lightbox.option({
             'resizeDuration': 200, // Animation duration when resizing the image
-            'wrapAround': true,    // Allow cycling through images
+            'wrapAround': true, // Allow cycling through images
             'showImageNumberLabel': false, // Hide image number label
             'alwaysShowNavOnTouchDevices': true, // Show navigation arrows on touch devices
             'disableScrolling': true, // Prevent page scrolling when lightbox is open
-            'fadeDuration': 200,   // Fade-in duration
-            'positionFromTop': 50  // Distance from the top of the viewport
+            'fadeDuration': 200, // Fade-in duration
+            'positionFromTop': 50 // Distance from the top of the viewport
         });
     </script>
     <script>
@@ -585,6 +673,7 @@
         // Start the typing animation
         type();
     </script>
+    <script src="populateBarTable.js"></script>
 </body>
 
 </html>
