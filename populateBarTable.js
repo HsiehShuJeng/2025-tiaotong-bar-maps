@@ -548,48 +548,53 @@ const barData = [
 ];;
 
 function populateTable() {
-    const tableBody = document.querySelector("#shot-distribution-table tbody");
+    // Function to populate a single table
+    function populateSingleTable(tableId, hours) {
+        const tableBody = document.querySelector(`#${tableId} tbody`);
 
-    if (!tableBody) {
-        console.error("Table body not found!");
-        return;
+        if (!tableBody) {
+            console.error(`Table body for ${tableId} not found!`);
+            return;
+        }
+
+        // Clear existing rows
+        tableBody.innerHTML = "";
+
+        // Group bars by hour
+        const hourGroups = {};
+
+        hours.forEach(hour => {
+            hourGroups[hour] = barData.filter(bar => bar.startTime <= hour && bar.endTime >= hour);
+        });
+
+        // Create rows for each hour
+        hours.forEach(hour => {
+            const barsInHour = hourGroups[hour];
+
+            if (barsInHour.length > 0) {
+                barsInHour.forEach(bar => {
+                    const barRow = document.createElement("tr");
+                    barRow.innerHTML = `
+                        <td>${bar.name}</td>
+                        <td>${bar.bayesianScore}<br>${bar.rating}<br>${bar.reviewCount}</td>
+                        <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
+                    `;
+                    tableBody.appendChild(barRow);
+                });
+            } else {
+                const emptyRow = document.createElement("tr");
+                emptyRow.innerHTML = `<td colspan="3">No bars available</td>`;
+                tableBody.appendChild(emptyRow);
+            }
+        });
     }
 
-    console.log("Table body found:", tableBody);
+    // Populate the first table (13:00 ~ 17:00)
+    populateSingleTable("shot-distribution-table-1", ["13:00", "14:00", "15:00", "16:00", "17:00"]);
 
-    // Clear existing rows
-    tableBody.innerHTML = "";
-
-    // Group bars by hour
-    const hours = ["13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-    const hourGroups = {};
-
-    hours.forEach(hour => {
-        hourGroups[hour] = barData.filter(bar => bar.startTime <= hour && bar.endTime >= hour);
-        console.log(`Bars for ${hour}:`, hourGroups[hour]);
-    });
-
-    // Create rows for each hour
-    hours.forEach(hour => {
-        const barsInHour = hourGroups[hour];
-
-        if (barsInHour.length > 0) {
-            barsInHour.forEach(bar => {
-                const barRow = document.createElement("tr");
-                barRow.innerHTML = `
-                    <td>${bar.name}</td>
-                    <td>${bar.bayesianScore}<br>${bar.rating}<br>${bar.reviewCount}</td>
-                    <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
-                `;
-                tableBody.appendChild(barRow);
-            });
-        } else {
-            const emptyRow = document.createElement("tr");
-            emptyRow.innerHTML = `<td colspan="3">No bars available</td>`;
-            tableBody.appendChild(emptyRow);
-        }
-    });
+    // Populate the second table (18:00 ~ 22:00)
+    populateSingleTable("shot-distribution-table-2", ["18:00", "19:00", "20:00", "21:00", "22:00"]);
 }
 
-// Call the function to populate the table
+// Call the function to populate the tables
 populateTable();
