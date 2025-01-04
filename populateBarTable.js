@@ -659,8 +659,11 @@ function populateTable() {
         });
 
         // Add a click event listener to the document to close popups when clicking outside
-        document.addEventListener("click", () => {
-            document.querySelectorAll(".promotion-popup").forEach(popup => popup.remove());
+        document.addEventListener("click", (event) => {
+            // Check if the click was outside any bar name cell
+            if (!event.target.classList.contains("bar-name")) {
+                document.querySelectorAll(".promotion-popup").forEach(popup => popup.remove());
+            }
         });
     }
 
