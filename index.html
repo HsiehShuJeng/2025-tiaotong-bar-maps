@@ -448,7 +448,7 @@
         <div class="section" id="shot-operating-distribution">
             <h2>供 Shot 時間分佈</h2>
             <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
-                以下是各小時提供 Shot 的酒吧分佈，按貝氏平均評分排序。
+                以下是各小時提供 Shot 的酒吧分佈，按貝氏平均評分排序。<br>
             </p>
 
             <!-- First Block: 13:00 ~ 17:00 -->
@@ -468,6 +468,24 @@
                         <!-- Rows will be populated by JavaScript -->
                     </tbody>
                 </table>
+            </div>
+            <!-- Math Formula Section -->
+            <div style="margin-top: 40px; text-align: center; font-size: 1.2em; color: #333;">
+                <h3>貝氏平均公式</h3>
+                <p>貝氏平均是一種加權平均方法，用於平衡評分與評論數量之間的關係。公式如下：</p>
+                <div style="font-family: 'Times New Roman', serif; font-size: 1.5em;">
+                    \[
+                    \text{貝氏平均} = \frac{C \times \bar{R} + n \times R}{C + n}
+                    \]
+                </div>
+                <p>其中：</p>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><strong>\( C \)</strong>：總評論數（所有酒吧的評論總數）。</li>
+                    <li><strong>\( \bar{R} \)</strong>：平均評分（所有酒吧的平均評分）。</li>
+                    <li><strong>\( n \)</strong>：當前酒吧評論數（該酒吧的評論數量）。</li>
+                    <li><strong>\( R \)</strong>：當前酒吧評分（該酒吧的評分）。</li>
+                </ul>
+                <p>這個公式確保評論數較少的酒吧不會因為少數極端評分而影響排名，同時也考慮了整體評分的分佈。</p>
             </div>
 
             <!-- Second Block: 18:00 ~ 22:00 -->
@@ -540,24 +558,6 @@
         <!-- Images Section -->
         <div class="section" id="analysis-section">
             <h2>視覺化分析</h2>
-            <!-- Math Formula Section -->
-            <div style="margin-top: 40px; text-align: center; font-size: 1.2em; color: #333;">
-                <h3>貝氏平均公式</h3>
-                <p>貝氏平均是一種加權平均方法，用於平衡評分與評論數量之間的關係。公式如下：</p>
-                <div style="font-family: 'Times New Roman', serif; font-size: 1.5em;">
-                    \[
-                    \text{貝氏平均} = \frac{C \times \bar{R} + n \times R}{C + n}
-                    \]
-                </div>
-                <p>其中：</p>
-                <ul style="list-style-type: none; padding: 0;">
-                    <li><strong>\( C \)</strong>：總評論數（所有酒吧的評論總數）。</li>
-                    <li><strong>\( \bar{R} \)</strong>：平均評分（所有酒吧的平均評分）。</li>
-                    <li><strong>\( n \)</strong>：當前酒吧評論數（該酒吧的評論數量）。</li>
-                    <li><strong>\( R \)</strong>：當前酒吧評分（該酒吧的評分）。</li>
-                </ul>
-                <p>這個公式確保評論數較少的酒吧不會因為少數極端評分而影響排名，同時也考慮了整體評分的分佈。</p>
-            </div>
             <div class="grid-container">
                 <div class="grid-item">
                     <a href="images/operating_hours_distribution.png" data-lightbox="analysis"
