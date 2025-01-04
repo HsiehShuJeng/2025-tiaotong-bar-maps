@@ -21,7 +21,7 @@ const barData = [
         bayesianScore: 4.7577,
         rating: 5.0,
         reviewCount: 2830,
-        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJMSby2KqpQjQRgHGxi1YE9ok",
+        googleMapLink: "https://www.google.com/maps/place/%E8%BE%A3%E5%90%89%E9%BB%9E%E6%AD%A3%E5%AE%97%E6%88%90%E9%83%BD%E4%B8%B2%E4%B8%B2%E9%A6%99%E6%B0%91%E7%94%9F%E5%BA%97-%E4%B8%AD%E5%B1%B1%E5%9B%9B%E5%B7%9D%E9%BA%BB%E8%BE%A3%E4%B8%B2%E4%B8%B2%7C%E9%BA%BB%E8%BE%A3%E7%81%AB%E9%8D%8B%7C%E4%BA%BA%E6%B0%A3%E9%8D%8B%E7%89%A9%7C%E5%B9%B3%E5%83%B9%E7%81%AB%E9%8D%8B%7C%E5%A4%A7%E9%99%B8%E7%BE%8E%E9%A3%9F%7C%E5%9B%9B%E5%B7%9D%E6%92%B8%E4%B8%B2%7C%E5%9C%A8%E5%9C%B0%E6%8E%A8%E8%96%A6%E7%81%AB%E9%8D%8B/@25.0579275,121.5244397,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a9aad8f22631:0x89f604568bb17180!8m2!3d25.0579275!4d121.5244397!16s%2Fg%2F11vjqf2ts5?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
         website: "https://www.facebook.com/profile.php?id=61552922302454&mibextid=LQQJ4d",
         phone: "02 2521 8997"
     },
