@@ -547,9 +547,15 @@ const barData = [
     }
 ];;
 
-// Function to populate the table
 function populateTable() {
     const tableBody = document.querySelector("#shot-distribution-table tbody");
+
+    if (!tableBody) {
+        console.error("Table body not found!");
+        return;
+    }
+
+    console.log("Table body found:", tableBody);
 
     // Clear existing rows
     tableBody.innerHTML = "";
@@ -560,6 +566,7 @@ function populateTable() {
 
     hours.forEach(hour => {
         hourGroups[hour] = barData.filter(bar => bar.startTime <= hour && bar.endTime >= hour);
+        console.log(`Bars for ${hour}:`, hourGroups[hour]);
     });
 
     // Create rows for each hour
@@ -583,9 +590,6 @@ function populateTable() {
         }
     });
 }
-
-// Call the function to populate the table
-populate
 
 // Call the function to populate the table
 populateTable();
