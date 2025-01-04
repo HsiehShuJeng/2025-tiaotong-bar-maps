@@ -621,41 +621,46 @@ function populateTable() {
         // Add click event listeners to bar name cells
         const barNameCells = tableBody.querySelectorAll(".bar-name");
         barNameCells.forEach(cell => {
-            cell.addEventListener("click", () => {
-                // Toggle the popup
-                const promotion = cell.getAttribute("data-promotion");
-                const popup = document.createElement("div");
-                popup.className = "promotion-popup";
-                popup.textContent = promotion;
+            cell.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent the click from bubbling up to the document
 
-                // Position the popup relative to the clicked cell
-                const rect = cell.getBoundingClientRect();
-                popup.style.position = "absolute";
-                popup.style.top = `${rect.bottom}px`;
-                popup.style.left = `${rect.left}px`;
-                popup.style.backgroundColor = "white";
-                popup.style.border = "1px solid #ccc";
-                popup.style.padding = "10px";
-                popup.style.zIndex = "1000";
-                popup.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
-
-                // Remove the popup if it already exists
-                const existingPopup = document.querySelector(".promotion-popup");
+                // Check if a popup already exists for this cell
+                const existingPopup = cell.querySelector(".promotion-popup");
                 if (existingPopup) {
+                    // If the popup exists, remove it
                     existingPopup.remove();
+                } else {
+                    // Remove any other existing popups
+                    document.querySelectorAll(".promotion-popup").forEach(popup => popup.remove());
+
+                    // Create a new popup
+                    const promotion = cell.getAttribute("data-promotion");
+                    const popup = document.createElement("div");
+                    popup.className = "promotion-popup";
+                    popup.innerHTML = promotion;
+
+                    // Style the popup
+                    popup.style.position = "absolute";
+                    popup.style.backgroundColor = "white";
+                    popup.style.border = "1px solid #ccc";
+                    popup.style.padding = "10px";
+                    popup.style.zIndex = "1000";
+                    popup.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+
+                    // Position the popup below the clicked cell
+                    const rect = cell.getBoundingClientRect();
+                    popup.style.top = `${rect.bottom + window.scrollY}px`;
+                    popup.style.left = `${rect.left + window.scrollX}px`;
+
+                    // Append the popup to the cell
+                    cell.appendChild(popup);
                 }
-
-                // Add the popup to the document
-                document.body.appendChild(popup);
-
-                // Add a click event listener to the document to remove the popup when clicking outside
-                document.addEventListener("click", function handleOutsideClick(event) {
-                    if (!popup.contains(event.target) && !cell.contains(event.target)) {
-                        popup.remove();
-                        document.removeEventListener("click", handleOutsideClick);
-                    }
-                }, { once: true });
             });
+        });
+
+        // Add a click event listener to the document to close popups when clicking outside
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".promotion-popup").forEach(popup => popup.remove());
         });
     }
 
