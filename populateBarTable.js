@@ -340,8 +340,8 @@ const barData = [
     {
         name: "Aye Taipei Bar & Restaurant",
         address: "台北市中山區林森北路138巷15號",
-        startTime: "",
-        endTime: "",
+        startTime: "17:00",
+        endTime: "23:00",
         promotion: "",
         bayesianScore: 4.7187,
         rating: 4.7,
@@ -545,56 +545,58 @@ const barData = [
         website: "https://bit.ly/m634tw",
         phone: "02 2542 8222"
     }
-];;
+];
 
 function populateTable() {
-    // Function to convert time strings (e.g., "15:00") to minutes since midnight
+    // Helper to convert time strings to minutes since midnight
     function timeToMinutes(time) {
+        if (!time) return null; // Return null for missing startTime
         const [hours, minutes] = time.split(":").map(Number);
         return hours * 60 + minutes;
     }
 
-    // Function to populate a single table
+    // Helper to create rows for a bar
+    function createBarRow(bar) {
+        return `
+            <td>${bar.name}</td>
+            <td>${bar.bayesianScore}<br>🅶 ${bar.rating}<br>🅶 ${bar.reviewCount}</td>
+            <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
+        `;
+    }
+
+    // Helper to filter and sort bars for a specific hour
+    function filterBarsForHour(hour) {
+        const hourMinutes = timeToMinutes(hour);
+        const nextHourMinutes = hourMinutes + 60; // Calculate the start of the next hour
+        return barData
+            .filter(bar => {
+                const startMinutes = bar.startTime ? timeToMinutes(bar.startTime) : null;
+                return startMinutes !== null && startMinutes >= hourMinutes && startMinutes < nextHourMinutes;
+            })
+            .sort((a, b) => b.bayesianScore - a.bayesianScore); // Sort by Bayesian score in descending order
+    }
+
+    // Populate a single table
     function populateSingleTable(tableId, hours) {
         const tableBody = document.querySelector(`#${tableId} tbody`);
-
         if (!tableBody) {
             console.error(`Table body for ${tableId} not found!`);
             return;
         }
 
-        // Clear existing rows
+        // Clear any existing rows
         tableBody.innerHTML = "";
 
-        // Group bars by hour
-        const hourGroups = {};
-
-        hours.forEach(hour => {
-            const hourMinutes = timeToMinutes(hour);
-            hourGroups[hour] = barData.filter(bar => {
-                const startMinutes = timeToMinutes(bar.startTime);
-                const endMinutes = timeToMinutes(bar.endTime);
-                return startMinutes <= hourMinutes && endMinutes >= hourMinutes;
-            });
-        });
-
-        // Find the maximum number of bars in any hour group
-        const maxBars = Math.max(...Object.values(hourGroups).map(group => group.length));
-
-        // Create rows for each bar
-        for (let i = 0; i < maxBars; i++) {
+        // Create rows for each hour
+        const maxBarsPerHour = Math.max(...hours.map(hour => filterBarsForHour(hour).length));
+        for (let i = 0; i < maxBarsPerHour; i++) {
             const row = document.createElement("tr");
 
             hours.forEach(hour => {
-                const barsInHour = hourGroups[hour];
-                const bar = barsInHour[i];
-
+                const bars = filterBarsForHour(hour);
+                const bar = bars[i];
                 if (bar) {
-                    row.innerHTML += `
-                        <td>${bar.name}</td>
-                        <td>${bar.bayesianScore}<br>${bar.rating}<br>${bar.reviewCount}</td>
-                        <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
-                    `;
+                    row.innerHTML += createBarRow(bar);
                 } else {
                     row.innerHTML += `<td colspan="3"></td>`;
                 }
@@ -604,10 +606,10 @@ function populateTable() {
         }
     }
 
-    // Populate the first table (13:00 ~ 17:00)
+    // First table: 13:00 ~ 17:00
     populateSingleTable("shot-distribution-table-1", ["13:00", "14:00", "15:00", "16:00", "17:00"]);
 
-    // Populate the second table (18:00 ~ 22:00)
+    // Second table: 18:00 ~ 22:00
     populateSingleTable("shot-distribution-table-2", ["18:00", "19:00", "20:00", "21:00", "22:00"]);
 }
 
