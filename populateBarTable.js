@@ -558,8 +558,8 @@ function populateTable() {
     // Helper to create rows for a bar
     function createBarRow(bar) {
         return `
-            <td>${bar.name}</td>
-            <td>${bar.bayesianScore}<br>🅶 ${bar.rating}<br>🅶 ${bar.reviewCount}</td>
+            <td title="${bar.promotion || 'No promotion available'}">${bar.name}</td>
+            <td style="text-align: left;">${bar.bayesianScore}<br>🅶 ${bar.rating}<br>🅶 ${bar.reviewCount}</td>
             <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
         `;
     }
