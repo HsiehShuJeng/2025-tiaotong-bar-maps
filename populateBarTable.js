@@ -548,6 +548,12 @@ const barData = [
 ];;
 
 function populateTable() {
+    // Function to convert time strings (e.g., "15:00") to minutes since midnight
+    function timeToMinutes(time) {
+        const [hours, minutes] = time.split(":").map(Number);
+        return hours * 60 + minutes;
+    }
+
     // Function to populate a single table
     function populateSingleTable(tableId, hours) {
         const tableBody = document.querySelector(`#${tableId} tbody`);
@@ -564,7 +570,12 @@ function populateTable() {
         const hourGroups = {};
 
         hours.forEach(hour => {
-            hourGroups[hour] = barData.filter(bar => bar.startTime <= hour && bar.endTime >= hour);
+            const hourMinutes = timeToMinutes(hour);
+            hourGroups[hour] = barData.filter(bar => {
+                const startMinutes = timeToMinutes(bar.startTime);
+                const endMinutes = timeToMinutes(bar.endTime);
+                return startMinutes <= hourMinutes && endMinutes >= hourMinutes;
+            });
         });
 
         // Create rows for each hour

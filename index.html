@@ -363,7 +363,8 @@
             margin: 20px 0;
         }
 
-        #shot-distribution-table {
+        #shot-distribution-table-1,
+        #shot-distribution-table-2 {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
@@ -371,27 +372,36 @@
             min-width: 1000px;
         }
 
-        #shot-distribution-table th,
-        #shot-distribution-table td {
+        #shot-distribution-table-1 th,
+        #shot-distribution-table-1 td,
+        #shot-distribution-table-2 th,
+        #shot-distribution-table-2 td {
             padding: 12px 15px;
             border: 1px solid #ddd;
             text-align: center;
         }
 
-        #shot-distribution-table th {
+        /* Apply styles to table headers */
+        #shot-distribution-table-1 th,
+        #shot-distribution-table-2 th {
             background-color: #f4f4f4;
             font-weight: bold;
         }
 
-        #shot-distribution-table tbody tr {
+        /* Apply styles to table rows */
+        #shot-distribution-table-1 tbody tr,
+        #shot-distribution-table-2 tbody tr {
             border-bottom: 1px solid #ddd;
         }
 
-        #shot-distribution-table tbody tr:nth-of-type(even) {
+        /* Apply alternating row colors */
+        #shot-distribution-table-1 tbody tr:nth-of-type(even),
+        #shot-distribution-table-2 tbody tr:nth-of-type(even) {
             background-color: #f9f9f9;
         }
 
-        #shot-distribution-table tbody tr:last-of-type {
+        #shot-distribution-table-1 tbody tr:last-of-type,
+        #shot-distribution-table-2 tbody tr:last-of-type {
             border-bottom: 2px solid #333;
         }
     </style>
@@ -435,7 +445,6 @@
             <a href="#maps-section">排名地圖</a>
             <a href="#analysis-section">視覺化分析</a>
         </div>
-        <!-- Shot Operating Distribution Section -->
         <!-- Shot Operating Distribution Section -->
         <div class="section" id="shot-operating-distribution">
             <h2>供 Shot 時間分佈</h2>
