@@ -1,5 +1,18 @@
 const barData = [
     {
+        name: "醉後的晚餐",
+        address: "台北市中山區中山北路一段135巷28號",
+        startTime: "19:00",
+        endTime: "23:00",
+        promotion: "🥃本店供Shot時段為19:00 - 23:00<br>🎁1/4微醺散步專屬優惠：<br>✷ 所有啤酒99元 <br>✷ 消費達低消200元即贈本店特色修女主題酒吧初體驗（初見愛心）拍立得乙張",
+        bayesianScore: 4.719,
+        rating: 4.7,
+        reviewCount: 75,
+        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJmSjHCACpQjQR6SIrzkCC110",
+        website: "https://www.instagram.com/drunk_dinner_bar",
+        phone: ""
+    },
+    {
         name: "辣吉點火烤兩吃",
         address: "台北市中山區中山北路一段105巷16號之1",
         startTime: "15:00",
