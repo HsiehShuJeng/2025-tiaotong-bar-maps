@@ -578,26 +578,30 @@ function populateTable() {
             });
         });
 
-        // Create rows for each hour
-        hours.forEach(hour => {
-            const barsInHour = hourGroups[hour];
+        // Find the maximum number of bars in any hour group
+        const maxBars = Math.max(...Object.values(hourGroups).map(group => group.length));
 
-            if (barsInHour.length > 0) {
-                barsInHour.forEach(bar => {
-                    const barRow = document.createElement("tr");
-                    barRow.innerHTML = `
+        // Create rows for each bar
+        for (let i = 0; i < maxBars; i++) {
+            const row = document.createElement("tr");
+
+            hours.forEach(hour => {
+                const barsInHour = hourGroups[hour];
+                const bar = barsInHour[i];
+
+                if (bar) {
+                    row.innerHTML += `
                         <td>${bar.name}</td>
                         <td>${bar.bayesianScore}<br>${bar.rating}<br>${bar.reviewCount}</td>
                         <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
                     `;
-                    tableBody.appendChild(barRow);
-                });
-            } else {
-                const emptyRow = document.createElement("tr");
-                emptyRow.innerHTML = `<td colspan="3">No bars available</td>`;
-                tableBody.appendChild(emptyRow);
-            }
-        });
+                } else {
+                    row.innerHTML += `<td colspan="3"></td>`;
+                }
+            });
+
+            tableBody.appendChild(row);
+        }
     }
 
     // Populate the first table (13:00 ~ 17:00)
