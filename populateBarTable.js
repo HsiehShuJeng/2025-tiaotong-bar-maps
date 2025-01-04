@@ -8,7 +8,7 @@ const barData = [
         bayesianScore: 4.719,
         rating: 4.7,
         reviewCount: 75,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJmSjHCACpQjQR6SIrzkCC110",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJmSjHCACpQjQR6SIrzkCC110",
         website: "https://www.instagram.com/drunk_dinner_bar",
         phone: ""
     },
@@ -21,7 +21,7 @@ const barData = [
         bayesianScore: 4.7577,
         rating: 5.0,
         reviewCount: 2830,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJMSby2KqpQjQRgHGxi1YE9ok",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJMSby2KqpQjQRgHGxi1YE9ok",
         website: "https://www.facebook.com/profile.php?id=61552922302454&mibextid=LQQJ4d",
         phone: "02 2521 8997"
     },
@@ -34,7 +34,7 @@ const barData = [
         bayesianScore: 4.7244,
         rating: 5.0,
         reviewCount: 342,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJARRKXbWpQjQRrDsx03OW4Io",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJARRKXbWpQjQRrDsx03OW4Io",
         website: "http://instagram.com/kumosakura2022",
         phone: "02 2523 6661"
     },
@@ -47,7 +47,7 @@ const barData = [
         bayesianScore: 4.7231,
         rating: 4.8,
         reviewCount: 933,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJqzq0M96pQjQR0eoJPJvpx18",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJqzq0M96pQjQR0eoJPJvpx18",
         website: "https://www.facebook.com/%E9%AD%9A%E6%93%BA%E6%93%BA%E9%AD%9A%E7%81%AB%E9%8D%8B-100383852445001/",
         phone: "02 2567 3131"
     },
@@ -60,7 +60,7 @@ const barData = [
         bayesianScore: 4.7226,
         rating: 5.0,
         reviewCount: 227,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJDRDyqoypQjQR4GXpcJjq7Xc",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJDRDyqoypQjQR4GXpcJjq7Xc",
         website: "https://instagram.com/seeyou.nine?igshid=MzRlODBiNWFlZA==",
         phone: "0955 502 409"
     },
@@ -73,7 +73,7 @@ const barData = [
         bayesianScore: 4.7219,
         rating: 4.8,
         reviewCount: 658,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ70OTYn2pQjQR5wxa-e5Jx5A",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ70OTYn2pQjQR5wxa-e5Jx5A",
         website: "",
         phone: "02 2531 9919"
     },
@@ -86,7 +86,7 @@ const barData = [
         bayesianScore: 4.7215,
         rating: 5.0,
         reviewCount: 159,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJxyzvbaqpQjQRqvSLpO12GPQ",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJxyzvbaqpQjQRqvSLpO12GPQ",
         website: "https://www.instagram.com/theopendoor_tpe/",
         phone: "02 2567 5751"
     },
@@ -99,7 +99,7 @@ const barData = [
         bayesianScore: 4.7211,
         rating: 5.0,
         reviewCount: 128,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJVSX3gZWpQjQR63VvK2Mto2E",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJVSX3gZWpQjQR63VvK2Mto2E",
         website: "https://instagram.com/square_taipei?igshid=YmMyMTA2M2Y=",
         phone: "0963 399 299"
     },
@@ -112,7 +112,7 @@ const barData = [
         bayesianScore: 4.721,
         rating: 5.0,
         reviewCount: 121,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ-STechKpQjQR9vJpoHPMjiw",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ-STechKpQjQR9vJpoHPMjiw",
         website: "https://instagram.com/moontaipei_bar?igshid=YmMyMTA2M2Y=",
         phone: "0905 973 964"
     },
@@ -125,7 +125,7 @@ const barData = [
         bayesianScore: 4.7206,
         rating: 4.8,
         reviewCount: 349,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJk3lGbtypQjQRaDWDkSFy0yQ",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJk3lGbtypQjQRaDWDkSFy0yQ",
         website: "https://instagram.com/another.eatery",
         phone: "02 2395 6900"
     },
@@ -138,7 +138,7 @@ const barData = [
         bayesianScore: 4.7205,
         rating: 4.9,
         reviewCount: 148,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ264CQjKpQjQRzDtusW8f-aA",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ264CQjKpQjQRzDtusW8f-aA",
         website: "",
         phone: "02 2511 8650"
     },
@@ -151,7 +151,7 @@ const barData = [
         bayesianScore: 4.7201,
         rating: 4.9,
         reviewCount: 105,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJny7u5mWpQjQRR7gT3NX74Lk",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJny7u5mWpQjQRR7gT3NX74Lk",
         website: "https://www.instagram.com/gbartraphouse?igsh=MWx2dnl1NGRydWdrNQ==",
         phone: "0987 801 295"
     },
@@ -164,7 +164,7 @@ const barData = [
         bayesianScore: 4.72,
         rating: 4.8,
         reviewCount: 214,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ6SKI-qipQjQRf5mKrFnn6Zs",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ6SKI-qipQjQRf5mKrFnn6Zs",
         website: "https://reurl.cc/pxzq1r",
         phone: "02 2531 5961"
     },
@@ -177,7 +177,7 @@ const barData = [
         bayesianScore: 4.7199,
         rating: 5.0,
         reviewCount: 57,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ6XnjzM6pQjQRDMp1boVx0ok",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ6XnjzM6pQjQRDMp1boVx0ok",
         website: "",
         phone: "02 2562 0399"
     },
@@ -190,7 +190,7 @@ const barData = [
         bayesianScore: 4.7199,
         rating: 5.0,
         reviewCount: 52,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJF9ZjOsqpQjQR4rK89jwG5JU",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJF9ZjOsqpQjQR4rK89jwG5JU",
         website: "https://www.instagram.com/sowilobar/?next=/&hl=zh-tw",
         phone: "02 2581 8285"
     },
@@ -203,7 +203,7 @@ const barData = [
         bayesianScore: 4.7197,
         rating: 4.9,
         reviewCount: 66,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ5fJHX9GpQjQRy7fAyXNJyqU",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ5fJHX9GpQjQRy7fAyXNJyqU",
         website: "https://m.facebook.com/Shalom-sabar-103049838643088/",
         phone: "02 2568 1220"
     },
@@ -216,7 +216,7 @@ const barData = [
         bayesianScore: 4.7196,
         rating: 4.9,
         reviewCount: 53,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ77ewCnmpQjQRGxK0NUnSTzg",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ77ewCnmpQjQRGxK0NUnSTzg",
         website: "",
         phone: "02 2564 2468"
     },
@@ -229,7 +229,7 @@ const barData = [
         bayesianScore: 4.7193,
         rating: 5.0,
         reviewCount: 13,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJifDlSgCpQjQRGLj5CIR8BjQ",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJifDlSgCpQjQRGLj5CIR8BjQ",
         website: "",
         phone: "02 2522 1118"
     },
@@ -242,7 +242,7 @@ const barData = [
         bayesianScore: 4.7193,
         rating: 4.9,
         reviewCount: 20,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJI-5NdompQjQRWILcI7GU8t0",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJI-5NdompQjQRWILcI7GU8t0",
         website: "",
         phone: "02 2537 7775"
     },
@@ -255,7 +255,7 @@ const barData = [
         bayesianScore: 4.7192,
         rating: 5.0,
         reviewCount: 8,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ-cD7lSOpQjQREbk85ZqHZUk",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ-cD7lSOpQjQREbk85ZqHZUk",
         website: "https://www.instagram.com/logos_tpe/",
         phone: "02 2511 7117"
     },
@@ -268,7 +268,7 @@ const barData = [
         bayesianScore: 4.7192,
         rating: 4.8,
         reviewCount: 26,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ5a6SWEupQjQR41PosYbfMJU",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ5a6SWEupQjQR41PosYbfMJU",
         website: "https://instagram.com/anabar04?igshid=MmIzYWVlNDQ5Yg==",
         phone: "0906 678 027"
     },
@@ -281,7 +281,7 @@ const barData = [
         bayesianScore: 4.7191,
         rating: 5.0,
         reviewCount: 3,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ_7yTsiWpQjQRucmI_iTUSCE",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ_7yTsiWpQjQRucmI_iTUSCE",
         website: "https://instagram.com/littlebar2022?igshid=MzNlNGNkZWQ4Mg==",
         phone: "0986 555 806"
     },
@@ -294,7 +294,7 @@ const barData = [
         bayesianScore: 4.719,
         rating: 4.7,
         reviewCount: 75,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJmSjHCACpQjQR6SIrzkCC110",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJmSjHCACpQjQR6SIrzkCC110",
         website: "https://www.instagram.com/drunk_dinner_bar",
         phone: ""
     },
@@ -307,7 +307,7 @@ const barData = [
         bayesianScore: 4.7189,
         rating: 4.7,
         reviewCount: 120,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJo6X2teapQjQRbZue75Qslac",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJo6X2teapQjQRbZue75Qslac",
         website: "https://www.facebook.com/people/East-Village-by-A-Train/61552159766573/",
         phone: "02 2541 8992"
     },
@@ -320,7 +320,7 @@ const barData = [
         bayesianScore: 4.7189,
         rating: 4.7,
         reviewCount: 139,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ-fVeWG-pQjQRPHDK10s_Zyc",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ-fVeWG-pQjQRPHDK10s_Zyc",
         website: "",
         phone: "02 2511 1159"
     },
@@ -333,7 +333,7 @@ const barData = [
         bayesianScore: 4.7189,
         rating: 4.7,
         reviewCount: 152,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJYw8FAUapQjQRJsabw9DQEbs",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJYw8FAUapQjQRJsabw9DQEbs",
         website: "https://www.instagram.com/addict.bistro/",
         phone: "02 2563 9720"
     },
@@ -346,7 +346,7 @@ const barData = [
         bayesianScore: 4.7188,
         rating: 4.6,
         reviewCount: 40,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ_0WwQ_qpQjQRVvb2iliuJr8",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ_0WwQ_qpQjQRVvb2iliuJr8",
         website: "",
         phone: "02 2537 6051"
     },
@@ -359,7 +359,7 @@ const barData = [
         bayesianScore: 4.7187,
         rating: 4.7,
         reviewCount: 308,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ1aAxzRCpQjQRUFCLQyeCIl8",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ1aAxzRCpQjQRUFCLQyeCIl8",
         website: "https://www.facebook.com/ayetaipei/",
         phone: "02 2567 2485"
     },
@@ -372,7 +372,7 @@ const barData = [
         bayesianScore: 4.7184,
         rating: 4.7,
         reviewCount: 663,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJF1cE7BqpQjQRahbjy8PNncc",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJF1cE7BqpQjQRahbjy8PNncc",
         website: "https://eats.quickclick.cc/togo/13616?p=friedtheway",
         phone: "0919 119 029"
     },
@@ -385,7 +385,7 @@ const barData = [
         bayesianScore: 4.7183,
         rating: 4.3,
         reviewCount: 32,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJY_5qWR-pQjQRneKTXSyPzOU",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJY_5qWR-pQjQRneKTXSyPzOU",
         website: "https://instagram.com/barace_relax?r=nametag",
         phone: "02 2521 7131"
     },
@@ -398,7 +398,7 @@ const barData = [
         bayesianScore: 4.7183,
         rating: 4.5,
         reviewCount: 63,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJTaPJJHupQjQRhvnnTr5nBrw",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJTaPJJHupQjQRhvnnTr5nBrw",
         website: "https://www.instagram.com/vip____bar",
         phone: "02 2562 9816"
     },
@@ -411,7 +411,7 @@ const barData = [
         bayesianScore: 4.7182,
         rating: 4.7,
         reviewCount: 779,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJwbUNFxypQjQRMxOlgc5fH74",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJwbUNFxypQjQRMxOlgc5fH74",
         website: "https://instagram.com/r77_official_",
         phone: "02 2542 0520"
     },
@@ -424,7 +424,7 @@ const barData = [
         bayesianScore: 4.7182,
         rating: 4.4,
         reviewCount: 49,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ33lluGWpQjQRBrOJNOUYcB4",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ33lluGWpQjQRBrOJNOUYcB4",
         website: "",
         phone: "02 2523 2033"
     },
@@ -437,7 +437,7 @@ const barData = [
         bayesianScore: 4.7182,
         rating: 4.4,
         reviewCount: 49,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ33lluGWpQjQRBrOJNOUYcB4",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ33lluGWpQjQRBrOJNOUYcB4",
         website: "",
         phone: "02 2523 2033"
     },
@@ -450,7 +450,7 @@ const barData = [
         bayesianScore: 4.7172,
         rating: 4.5,
         reviewCount: 151,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ-Q889WWpQjQRJcO58ym_0Ys",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ-Q889WWpQjQRJcO58ym_0Ys",
         website: "http://bit.ly/SugarBarTaipeiFB",
         phone: "02 2542 5659"
     },
@@ -463,7 +463,7 @@ const barData = [
         bayesianScore: 4.7156,
         rating: 4.5,
         reviewCount: 280,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ5wCs_mWpQjQR_117Oj2OT3w",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ5wCs_mWpQjQR_117Oj2OT3w",
         website: "",
         phone: "02 2523 0828"
     },
@@ -476,7 +476,7 @@ const barData = [
         bayesianScore: 4.7152,
         rating: 4.4,
         reviewCount: 216,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJy9qq62WpQjQRzCxntS6d8Ng",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJy9qq62WpQjQRzCxntS6d8Ng",
         website: "https://m.facebook.com/%E6%99%83%E4%B8%B2%E7%87%92%E7%A7%81%E5%BB%9A-303067113923963/",
         phone: "02 2562 2432"
     },
@@ -489,7 +489,7 @@ const barData = [
         bayesianScore: 4.7152,
         rating: 4.5,
         reviewCount: 317,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJPWZsX2-pQjQR-UZ0K6wKl84",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJPWZsX2-pQjQR-UZ0K6wKl84",
         website: "",
         phone: "02 2563 3057"
     },
@@ -502,7 +502,7 @@ const barData = [
         bayesianScore: 4.7141,
         rating: 4.4,
         reviewCount: 278,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJcdVIt1-pQjQR1rC8fle83gs",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJcdVIt1-pQjQR1rC8fle83gs",
         website: "https://www.facebook.com/%E6%9D%B1%E9%81%93%E7%85%AE%E9%BA%BB%E8%BE%A3%E4%B8%B2%E4%B8%B2-2298240133832595",
         phone: "02 2562 1969"
     },
@@ -515,7 +515,7 @@ const barData = [
         bayesianScore: 4.7079,
         rating: 4.5,
         reviewCount: 949,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJh_mrw2WpQjQRaWvCYEO2Qow",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJh_mrw2WpQjQRaWvCYEO2Qow",
         website: "https://www.facebook.com/papipapilinsen/",
         phone: "02 2523 3223"
     },
@@ -528,7 +528,7 @@ const barData = [
         bayesianScore: 4.7038,
         rating: 4.4,
         reviewCount: 893,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJg-A9Mm-pQjQRJU0UoHwI1ss",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJg-A9Mm-pQjQRJU0UoHwI1ss",
         website: "http://www.nep6363.com/",
         phone: "02 2521 0069"
     },
@@ -541,7 +541,7 @@ const barData = [
         bayesianScore: 4.6787,
         rating: 4.1,
         reviewCount: 1238,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJ30DoS26pQjQRNxLXPpiA4vs",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJ30DoS26pQjQRNxLXPpiA4vs",
         website: "https://www.instagram.com/giligilibistro/",
         phone: "02 2523 0678"
     },
@@ -554,7 +554,7 @@ const barData = [
         bayesianScore: 4.6353,
         rating: 4.3,
         reviewCount: 4433,
-        googleMapLink: "https://www.google.com/maps/place/?q=place_id:ChIJg-MBO2-pQjQRFFJKWg8N4b0",
+        googleMapLink: "https://www.google.com/maps/search/?api=1&query=%20&query_place_id=ChIJg-MBO2-pQjQRFFJKWg8N4b0",
         website: "https://bit.ly/m634tw",
         phone: "02 2542 8222"
     }
