@@ -658,7 +658,7 @@ function populateTable() {
                     const popup = document.createElement("div");
                     popup.className = "promotion-popup";
                     popup.innerHTML = `
-                        <div style="text-align: left;">
+                        <div class="popup-content">
                             <strong>促銷</strong><br>${promotion}<br><br>
                             <strong>簡介</strong><br>${intro}
                         </div>
