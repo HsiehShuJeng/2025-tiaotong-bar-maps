@@ -595,7 +595,7 @@ function populateTable() {
             <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
         `;
     }
-    
+
     // Helper to filter and sort bars for a specific hour
     function filterBarsForHour(hour) {
         const hourMinutes = timeToMinutes(hour);
@@ -654,9 +654,13 @@ function populateTable() {
 
                     // Create a new popup
                     const promotion = cell.getAttribute("data-promotion");
+                    const intro = cell.getAttribute("data-intro");
                     const popup = document.createElement("div");
                     popup.className = "promotion-popup";
-                    popup.innerHTML = promotion;
+                    popup.innerHTML = `
+                        <strong>Promotion:</strong> ${promotion}<br><br>
+                        <strong>Introduction:</strong> ${intro}
+                    `;
 
                     // Style the popup
                     popup.style.position = "absolute";
