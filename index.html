@@ -621,29 +621,8 @@
     </div>
     <!-- Lightbox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script>
-        lightbox.option({
-            'resizeDuration': 200, // Animation duration when resizing the image
-            'wrapAround': true, // Allow cycling through images
-            'showImageNumberLabel': false, // Hide image number label
-            'alwaysShowNavOnTouchDevices': true, // Show navigation arrows on touch devices
-            'disableScrolling': true, // Prevent page scrolling when lightbox is open
-            'fadeDuration': 200, // Fade-in duration
-            'positionFromTop': 50 // Distance from the top of the viewport
-        });
-    </script>
-    <script>
-        // Smooth scrolling for navigation tabs
-        document.querySelectorAll('.nav-tabs a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="lightboxConfig.js"></script>
+    <script src="smoothScrolling.js"></script>
     <!-- Footer Section -->
     <footer>
         <div>
@@ -673,34 +652,7 @@
             </div>
         </div>
     </footer>
-    <!-- Typing Animation Script -->
-    <script>
-        const typingLine = document.querySelector('.typing-line');
-        const text = typingLine.textContent.trim(); // Remove leading/trailing whitespace
-        typingLine.textContent = ''; // Clear the text initially
-
-        let index = 0;
-        const typingSpeed = 55; // Adjust typing speed (in milliseconds)
-
-        // Create a blinking cursor element
-        const cursor = document.createElement('span');
-        cursor.classList.add('cursor');
-        typingLine.appendChild(cursor); // Add cursor to the typing line
-
-        function type() {
-            if (index < text.length) {
-                typingLine.textContent += text[index];
-                index++;
-                setTimeout(type, typingSpeed);
-            } else {
-                // Remove the blinking cursor after typing is complete
-                cursor.remove();
-            }
-        }
-
-        // Start the typing animation
-        type();
-    </script>
+    <script src="typingAnimation.js"></script>
     <script src="populateBarTable.js"></script>
 </body>
 
