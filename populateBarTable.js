@@ -544,8 +544,11 @@ function populateTable() {
 
     // Helper to create rows for a bar
     function createBarRow(bar) {
+        // Split the promotion message into two parts
+        const [promotion, intro] = bar.promotion ? bar.promotion.split('◠◡◠◡◠◡◠◡◠◡◠◡') : ['沒有促銷資訊。', '沒有簡介，我就懶。'];
+    
         return `
-            <td class="bar-name" data-promotion="${bar.promotion || 'No promotion available'}">${bar.name}</td>
+            <td class="bar-name" data-promotion="${promotion}" data-intro="${intro}">${bar.name}</td>
             <td style="text-align: left;">${bar.bayesianScore}<br>🅶 ${bar.rating}<br>🅶 ${bar.reviewCount}</td>
             <td><a href="${bar.googleMapLink}" target="_blank">Google Map</a></td>
         `;
